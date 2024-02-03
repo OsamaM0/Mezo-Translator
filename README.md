@@ -1,4 +1,6 @@
-# MEZO Translation App 🌐🔊📷
+# **MEZO Translation App 🌐🔊📷**
+
+# Features 🚀
 
 ## Voice Translation 🎙️
 
