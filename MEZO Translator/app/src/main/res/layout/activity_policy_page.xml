@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PolicyPage">
+
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="230dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:text="Policy Agreement"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:fontFamily="@font/inria_sans_bold"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="391dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="48dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:text="1. By downloading, installing, or using the Language Translator App , you agree to comply with and be bound by these Terms of Service and Privacy Policy. If you do not agree with these terms, please do not use the App."
+        app:fontFamily="@font/inria_sans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="391dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="24dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="3. Please review our Privacy Policy, which details how we collect, use, and disclose information from our users. By using the App, you consent to the practices described in the Privacy Policy."
+        app:fontFamily="@font/inria_sans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="391dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="20dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:text="4. We employ reasonable security measures to protect the data transmitted through the App. However, no method of transmission over the internet or electronic storage is 100% secure. You acknowledge and agree that we cannot guarantee the security of your data."
+        app:fontFamily="@font/inria_sans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="391dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="104dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:text="5. We employ reasonable security measures to protect the data transmitted through the App. However, no method of transmission over the internet or electronic storage is 100% secure. You acknowledge and agree that we cannot guarantee the security of your data."
+        app:fontFamily="@font/inria_sans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="406dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="Thank you for using our Language Translator App!"
+        app:fontFamily="@font/inria_sans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="391dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="16dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="2. We grant you a limited, non-exclusive, non-transferable, revocable license to use the App for personal or non-commercial purposes. You may not sublicense, modify, reverse engineer, or attempt to extract the source code of the App."
+        app:fontFamily="@font/inria_sans"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <Button
+        android:id="@+id/continueBtn"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/roundcorner"
+        android:fontFamily="sans-serif-medium"
+        android:text="Continue"
+        android:textSize="16sp"
+
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:layout_constraintVertical_bias="0.391" />
+</androidx.constraintlayout.widget.ConstraintLayout>
