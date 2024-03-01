@@ -5,18 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="?attr/backgroundColor"
     tools:context=".Dashboard">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
         android:orientation="vertical">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
-            android:layout_width="426dp"
+            android:layout_width="match_parent"
             android:layout_height="96dp"
-            android:background="?attr/colorPrimary"
+            android:background="?attr/cardForegroundColor"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme" />
 
@@ -44,17 +47,17 @@
                 android:layout_height="45dp"
                 android:layout_gravity="top|end"
                 android:layout_marginEnd="1dp"
-                app:srcCompat="@drawable/icons8_azerbaijan_48" />
+                app:srcCompat="@drawable/icons8_azerbaijan_48"
+                android:importantForAccessibility="no" />
 
             <ImageView
                 android:id="@+id/changelanPos"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_marginStart="155dp"
-
                 android:layout_marginTop="8dp"
-
-                app:srcCompat="@drawable/exchange" />
+                app:srcCompat="@drawable/exchange"
+                app:tint="@color/light_blue_purple" />
 
             <TextView
                 android:id="@+id/targetlanguage"
@@ -91,10 +94,9 @@
 
         <RelativeLayout
             android:id="@+id/relativeLayout"
-            android:layout_width="382dp"
+            android:layout_width="match_parent"
             android:layout_height="241dp"
-
-            android:layout_marginTop="40dp"
+            android:layout_margin="30dp"
             android:background="@drawable/textbox_border"
             android:elevation="8dp"
             android:paddingLeft="5sp"
@@ -102,59 +104,66 @@
             android:paddingRight="5sp"
             android:paddingBottom="5sp">
 
-            <Button
-                android:id="@+id/translatetextbtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="8dp"
-                android:background="@drawable/roundcorner5"
-                android:fontFamily="sans-serif-medium"
-                android:text="Translate"
-                android:textSize="12sp" />
+            <!--                android:foreground="@drawable/roundcorner"-->
 
             <ImageView
                 android:id="@+id/usertxtCopy"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_alignParentBottom="true"
-                android:layout_marginEnd="171dp"
-                android:layout_marginBottom="18dp"
-                android:layout_toStartOf="@+id/translatetextbtn"
-                app:srcCompat="@drawable/icons8_copy_48" />
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="3dp"
+                android:layout_toEndOf="@+id/usertextListen"
+                app:srcCompat="@drawable/icons8_copy_48"
+                app:tint="@color/light_blue_purple" />
 
             <ImageView
                 android:id="@+id/usertextListen"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="14dp"
-                android:layout_marginEnd="11dp"
-                android:layout_marginBottom="17dp"
-                android:layout_toStartOf="@+id/usertxtCopy"
-                app:srcCompat="@drawable/icons8_voice_30" />
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="1dp"
+                app:srcCompat="@drawable/icons8_voice_30"
+                app:tint="@color/light_blue_purple"
+                tools:ignore="NotSibling" />
 
             <MultiAutoCompleteTextView
 
                 android:id="@+id/translatedtextbox"
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
-                android:backgroundTint="#FFFFFF"
+                android:layout_margin="10dp"
+                android:background="?attr/cardForegroundColor"
+                android:backgroundTint="?attr/cardForegroundColor"
                 android:gravity="start"
                 android:hint="Enter text to translate"
                 android:padding="10dp"
-                android:textColor="#000000"
-                android:textSize="20sp" />
+                android:textColor="?attr/textFillColor"
+                android:textSize="20sp"
+                app:tint="@color/light_blue_purple" />
         </RelativeLayout>
+
+        <Button
+            android:id="@+id/translatetextbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:gravity="center"
+            android:background="@drawable/roundcorner"
+            android:backgroundTintMode="add"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/translate_btn"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
 
         <RelativeLayout
             android:id="@+id/relativeLayout2"
-            android:layout_width="382dp"
+            android:layout_width="match_parent"
             android:layout_height="255dp"
-            android:layout_marginTop="32dp"
+            android:layout_margin="30dp"
             android:background="@drawable/textbox_border"
             android:elevation="8dp"
             android:paddingLeft="5dp"
@@ -164,55 +173,50 @@
 
             <ImageView
                 android:id="@+id/translatedtxtCopy"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_alignParentEnd="true"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_alignParentBottom="true"
-                android:layout_marginEnd="280dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginBottom="3dp"
-                app:srcCompat="@drawable/icons8_copy_48" />
+                android:layout_toEndOf="@+id/translatedttxtListen"
+                app:srcCompat="@drawable/icons8_copy_48"
+                app:tint="@color/light_blue_purple" />
+
 
             <ImageView
                 android:id="@+id/translatedttxtListen"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentBottom="true"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="12dp"
                 android:layout_marginBottom="1dp"
-                android:layout_toStartOf="@+id/translatedtxtCopy"
-                app:srcCompat="@drawable/icons8_voice_30" />
+                app:srcCompat="@drawable/icons8_voice_30"
+                app:tint="@color/light_blue_purple"
+                tools:ignore="NotSibling" />
 
             <TextView
                 android:id="@+id/translatedTextView"
                 android:layout_width="match_parent"
-                android:layout_height="215dp"
-                android:backgroundTint="#FFFFFF"
+                android:layout_height="180dp"
+                android:layout_margin="10dp"
+                android:background="?attr/cardForegroundColor"
+                android:backgroundTint="?attr/cardForegroundColor"
                 android:gravity="start"
-                android:hint="Your translated text"
+                android:hint="Enter text to translate"
                 android:padding="10dp"
-                android:textColor="#000000"
-                android:textSize="20sp" />
+                android:textColor="?attr/textFillColor"
+                android:textSize="20sp"
+                app:tint="@color/light_blue_purple" />
         </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"></LinearLayout>
+
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="28dp"
-        android:text="Language Translator"
-        android:textColor="#ffffff"
-        android:textSize="28dp"
-
-        />
 
     <ImageView
         android:id="@+id/shutdownImg"

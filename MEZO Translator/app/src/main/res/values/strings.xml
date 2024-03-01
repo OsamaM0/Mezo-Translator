@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MEZO Translation</string>
+    <string name="translate_btn">Translate</string>
 </resources>

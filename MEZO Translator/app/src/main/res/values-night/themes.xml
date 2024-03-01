@@ -2,15 +2,13 @@
     <!-- Base application theme. -->
     <style name="Theme.TranslationApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/black</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="backgroundColor">@color/darkest_blue_purple</item>
+        <item name="cardForegroundColor">@color/dark_blue_purple</item>
+        <item name="textFillColor">@color/white</item>
+        <item name="icon">@color/light_blue_purple</item>
+        <item name="colorPrimary">@color/light_blue_purple</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
         <!-- Customize your theme here. -->
     </style>
 </resources>
