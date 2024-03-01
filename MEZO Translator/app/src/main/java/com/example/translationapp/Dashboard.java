@@ -9,10 +9,13 @@ import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
+import android.view.ViewTreeObserver;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.MultiAutoCompleteTextView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,15 +25,16 @@ import java.util.ArrayList;
 import java.util.Locale;
 
 public class Dashboard extends AppCompatActivity {
-    private MultiAutoCompleteTextView userText;
+    private EditText userText, translatedText;
     private View translateBtn;
     private String result;
-    private TextView sourcelan,translatedText,targetlan;
+    private TextView sourcelan,targetlan;
     private TranslationServiceManager serviceManager;
     private  Clipboard clipboard;
     private LanguageSelector languages;
     protected static final int RESULT_SPEECH = 1;
     private ImageView imageView7,history,shutdown,showCamera;
+    // Declare the RelativeLayout
 
     private Model databaseCon;
 
@@ -76,6 +80,8 @@ public class Dashboard extends AppCompatActivity {
 
         //Getting target language from target language textView
         targetlan = findViewById(R.id.targetlanguage);
+
+
 
         String languageIntent = getIntent().getStringExtra("Language");
         String required = getIntent().getStringExtra("Required");
@@ -239,7 +245,7 @@ public class Dashboard extends AppCompatActivity {
         });
 
 
-        showCamera=findViewById(R.id.imageView6);
+        showCamera=findViewById(R.id.showCamera);
         showCamera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -270,6 +276,9 @@ public class Dashboard extends AppCompatActivity {
                 }
             }
         });
+
+
+        // Set an OnGlobalLayoutListener to detect changes in the layout
     }
 
    public void createThread(String source,String target, String text){

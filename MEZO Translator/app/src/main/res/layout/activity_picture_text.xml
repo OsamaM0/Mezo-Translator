@@ -1,50 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
     tools:context=".Picture_Text_Activity">
 
 
     <FrameLayout
-        android:layout_width="418dp"
-        android:layout_height="582dp"
-        android:background="#ffffff"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="?attr/backgroundColor"
+        android:layout_weight="2"
+
+        >
 
         <SurfaceView
             android:id="@+id/camera"
             android:layout_width="match_parent"
-            android:layout_height="541dp"
-             />
+            android:layout_height="match_parent" />
 
     </FrameLayout>
 
     <ImageView
         android:id="@+id/capturebtn"
-        android:layout_width="79dp"
-        android:layout_height="71dp"
-        android:layout_marginBottom="52dp"
-        android:layout_marginEnd="180dp"
-        android:layout_marginStart="152dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/icons8_diaphragm_96" />
+        android:layout_margin="10dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/ic_shutter"
+        app:tint="@color/light_blue_purple" />
 
     <TextView
         android:id="@+id/data"
-        android:layout_width="100dp"
-        android:layout_height="12dp"
-        android:layout_marginBottom="4dp"
-        android:layout_marginStart="16dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="TextView" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

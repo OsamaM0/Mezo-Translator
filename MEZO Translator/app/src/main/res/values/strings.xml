@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">MEZO Translation</string>
     <string name="translate_btn">Translate</string>
+    <string name="enter_text_to_translate">Enter text to translate</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="select_language_search">Select Language</string>
+    <string name="clear_all_history_btn">Clear All</string>
+    <string name="history_of_translation">History of Translation</string>
+    <string name="bin_is_empty_text">It\'s Empty, No History</string>
 </resources>

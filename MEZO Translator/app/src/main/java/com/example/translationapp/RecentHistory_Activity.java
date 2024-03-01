@@ -39,22 +39,6 @@ public class RecentHistory_Activity extends AppCompatActivity {
         Intent shutdownIntent = new Intent(RecentHistory_Activity.this,MainActivity.class);
         Intent dashboardIntent = new Intent(RecentHistory_Activity.this,Dashboard.class);
 
-        shutdown = findViewById(R.id.shutdownImg);
-        shutdown.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(shutdownIntent);
-            }
-        });
-
-        textImg = findViewById(R.id.imageView5);
-        textImg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                startActivity(dashboardIntent);
-            }
-        });
 
         //Database related implementation
          database  = new Model(this);
