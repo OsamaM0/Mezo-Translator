@@ -7,4 +7,14 @@
     <string name="clear_all_history_btn">Clear All</string>
     <string name="history_of_translation">تاريخ الترجمات</string>
     <string name="bin_is_empty_text">فارغه</string>
+    <string name="translator_home_btn" >المترجم</string>
+    <string name="translator_home_sub_btn">ترجم كلامك او نصك</string>
+    <string name="camera_home_btn">كاميرا</string>
+    <string name="camera_home_sup_btn">ألتقط صورة وترجمها</string>
+    <string name="history_home_btn">تاريخ</string>
+    <string name="history_home_sups_btn">أظهر كل ترجماتك القديمه</string>
+    <string name="phrases_home_btn">كتاب العبارات</string>
+    <string name="phrase_home_subs_btn">تعلم أكثر العبارات الشائعه</string>
+    <string name="chat_home_btn">محادثه</string>
+    <string name="chat_home_subs_btn">دردشه صوتيه بكل لغات العالم</string>
 </resources>

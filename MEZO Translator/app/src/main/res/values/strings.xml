@@ -7,4 +7,14 @@
     <string name="clear_all_history_btn">Clear All</string>
     <string name="history_of_translation">History of Translation</string>
     <string name="bin_is_empty_text">It\'s Empty, No History</string>
+    <string name="translator_home_btn" >Translator</string>
+    <string name="translator_home_sub_btn">Translate your speech or your words</string>
+    <string name="camera_home_btn">camera</string>
+    <string name="camera_home_sup_btn">Take a Picture and Translate It</string>
+    <string name="history_home_btn">history</string>
+    <string name="history_home_sups_btn">Show All your Previous Translations</string>
+    <string name="phrases_home_btn">Book of Phrases</string>
+    <string name="phrase_home_subs_btn">Learn Popular Phrases</string>
+    <string name="chat_home_btn">Chat</string>
+    <string name="chat_home_subs_btn">Voice Chat with All Languages</string>
 </resources>
