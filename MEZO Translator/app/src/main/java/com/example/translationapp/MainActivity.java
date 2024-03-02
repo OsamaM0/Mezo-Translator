@@ -28,7 +28,10 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        Intent dashboardIntent = new Intent(MainActivity.this,Dashboard.class);
+
+
+
+        Intent dashboardIntent = new Intent(MainActivity.this, HomeActivity.class);
         Intent policyIntent = new Intent(MainActivity.this, PolicyPage.class);
 
         //Get policyPage navigation link
