@@ -5,10 +5,12 @@
         <item name="backgroundColor">@color/darkest_blue_purple</item>
         <item name="cardForegroundColor">@color/dark_blue_purple</item>
         <item name="textFillColor">@color/white</item>
-        <item name="icon">@color/light_blue_purple</item>
-        <item name="colorPrimary">@color/light_blue_purple</item>
+        <item name="icon">@color/darkest_blue_purple</item>
+        <item name="colorPrimary">@color/dark_blue_purple</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
         <!-- Customize your theme here. -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 </resources>

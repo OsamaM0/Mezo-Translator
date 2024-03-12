@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/backgroundColor"
+    android:orientation="vertical"
+    tools:context=".HomeFragment">
+
+        <!-- Button 1 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/translate_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="@drawable/textbox_border"
+            android:elevation="8dp"
+            android:layout_margin="10dp" >
+
+            <!-- Button Image -->
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="18dp"
+                android:baselineAligned="false"
+                android:src="@drawable/ic_translate"
+                app:tint="?attr/icon" />
+
+            <!-- Button Texts -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Head Text -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/translator_home_btn"
+                    android:textColor="?attr/textFillColor"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- Sub Text -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/translator_home_sub_btn" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+            <!-- Button 2 -->
+            <LinearLayout
+                android:id="@+id/camera_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:background="@drawable/textbox_border"
+                android:elevation="8dp"
+                android:layout_margin="10dp" >
+
+                <!-- Button Image -->
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="18dp"
+                    android:src="@drawable/ic_camera"
+                    app:tint="?attr/icon" />
+
+                <!-- Button Texts -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Head Text -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/camera_home_btn"
+                        android:textColor="?attr/textFillColor"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <!-- Sub Text -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/camera_home_sup_btn" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!-- Button 3 -->
+            <LinearLayout
+                android:id="@+id/history_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:background="@drawable/textbox_border"
+                android:elevation="8dp"
+                android:layout_margin="10dp" >
+
+                <!-- Button Image -->
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="18dp"
+                    android:src="@drawable/history"
+                    app:tint="?attr/icon" />
+
+                <!-- Button Texts -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Head Text -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/history_home_btn"
+                        android:textColor="?attr/textFillColor"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <!-- Sub Text -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/history_home_sups_btn" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Button 3 -->
+            <LinearLayout
+                android:id="@+id/book_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:background="@drawable/textbox_border"
+                android:elevation="8dp"
+                android:layout_margin="10dp" >
+
+                <!-- Button Image -->
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="18dp"
+                    android:src="@drawable/ic_phrases"
+                    app:tint="?attr/icon" />
+
+                <!-- Button Texts -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Head Text -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/phrases_home_btn"
+                        android:textColor="?attr/textFillColor"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <!-- Sub Text -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/phrase_home_subs_btn" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/chat_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:background="@drawable/textbox_border"
+                android:elevation="8dp"
+                android:layout_margin="10dp" >
+
+                <!-- Button Image -->
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="18dp"
+                    android:src="@drawable/ic_chat"
+                    app:tint="?attr/icon" />
+
+                <!-- Button Texts -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Head Text -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chat_home_btn"
+                        android:textColor="?attr/textFillColor"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <!-- Sub Text -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/chat_home_subs_btn" />
+
+                </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

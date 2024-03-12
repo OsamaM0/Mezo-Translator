@@ -42,7 +42,6 @@ public class Picture_Text_Activity extends AppCompatActivity {
         //Removing default top header of application
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        getSupportActionBar().hide(); //This line hide default header
 
         setContentView(R.layout.activity_picture_text);
 

@@ -2,7 +2,8 @@
 <resources>
     <color name="dark_blue_purple">#2e3f64</color>
     <color name="darkest_blue_purple">#1b2234</color>
-    <color name="light_blue_purple">#6389c0</color>
+    <color name="light_blue_purple">#0d5cb7</color>
+    <color name="lightes_blue_purple">#1e8aff</color>
     <color name="light_gray">#DADADA</color>
     <color name="light_cyan">#23b1ff</color>
     <color name="dark_cyan">#0d5cb7</color>

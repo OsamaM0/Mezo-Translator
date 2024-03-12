@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.Icon;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
@@ -22,6 +24,7 @@ import android.widget.Toast;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Locale;
 
 public class Dashboard extends AppCompatActivity {
@@ -33,7 +36,7 @@ public class Dashboard extends AppCompatActivity {
     private  Clipboard clipboard;
     private LanguageSelector languages;
     protected static final int RESULT_SPEECH = 1;
-    private ImageView imageView7,history,shutdown,showCamera;
+    private ImageView imageView7,history,goback,showCamera, target_lang_flag, source_lang_flag;
     // Declare the RelativeLayout
 
     private Model databaseCon;
@@ -45,7 +48,6 @@ public class Dashboard extends AppCompatActivity {
         //Removing default top header of application
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        getSupportActionBar().hide(); //This line hide default header
 
         setContentView(R.layout.activity_dashboard);
 
@@ -57,6 +59,7 @@ public class Dashboard extends AppCompatActivity {
 
         //All Intents
         Intent shutdownIntent = new Intent(Dashboard.this,MainActivity.class);
+        Intent homeIntent = new Intent(Dashboard.this, HomeActivity.class);
         Intent sourceLanguage = new Intent(Dashboard.this,LanguagesPage.class);
         Intent targetLanguage = new Intent(Dashboard.this,LanguagesPage.class);
         Intent historyIntent = new Intent(Dashboard.this,RecentHistory_Activity.class);
@@ -77,9 +80,12 @@ public class Dashboard extends AppCompatActivity {
 
         //Getting source language from source language textView
         sourcelan = findViewById(R.id.sourcelanguage);
+        source_lang_flag = findViewById(R.id.source_lang_flag);
+
 
         //Getting target language from target language textView
         targetlan = findViewById(R.id.targetlanguage);
+        target_lang_flag = findViewById(R.id.target_lang_flag);
 
 
 
@@ -113,6 +119,14 @@ public class Dashboard extends AppCompatActivity {
             sourcelan.setText(languages.getSourcelan());
         }
 
+        int resID = getResources().getIdentifier("flag_"+getCountryCode(sourcelan.getText().toString()), "drawable", getPackageName());
+        source_lang_flag.setImageResource(resID);
+
+        resID = getResources().getIdentifier("flag_"+getCountryCode(targetlan.getText().toString()), "drawable", getPackageName());
+        target_lang_flag.setImageResource(resID);
+
+
+
 
         //Implement swapping the source and target language
         ImageView swaplan = findViewById(R.id.changelanPos);
@@ -123,6 +137,12 @@ public class Dashboard extends AppCompatActivity {
                 String swap = sourcelan.getText().toString();
                 sourcelan.setText(targetlan.getText().toString());
                 targetlan.setText(swap);
+
+                int resID = getResources().getIdentifier("flag_"+getCountryCode(sourcelan.getText().toString()), "drawable", getPackageName());
+                source_lang_flag.setImageResource(resID);
+
+                resID = getResources().getIdentifier("flag_"+getCountryCode(targetlan.getText().toString()), "drawable", getPackageName());
+                target_lang_flag.setImageResource(resID);
             }
         });
 
@@ -226,17 +246,17 @@ public class Dashboard extends AppCompatActivity {
 
         //Shut Down feature
         //User navigate to startup screen
-        shutdown = findViewById(R.id.shutdownImg);
-        shutdown.setOnClickListener(new View.OnClickListener() {
+        goback = findViewById(R.id.back_btn);
+        goback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(shutdownIntent);
+                startActivity(homeIntent);
             }
         });
 
         //Recent History feature
         //User navigate to history screen
-        history = findViewById(R.id.imageView8);
+        history = findViewById(R.id.history_btn);
         history.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -333,5 +353,242 @@ public class Dashboard extends AppCompatActivity {
 
     }
 
+
+    public String getCountryCode(String languageName) {
+
+        String langauge_country_code []= {"af-ZA",
+                "am-ET",
+                "ar-EG",
+                "ar-AE",
+                "ar-BH",
+                "ar-DZ",
+                "ar-IQ",
+                "ar-JO",
+                "ar-KW",
+                "ar-LB",
+                "ar-LY",
+                "ar-MA",
+                "arn-CL",
+                "ar-OM",
+                "ar-QA",
+                "ar-SA",
+                "ar-SY",
+                "ar-TN",
+                "ar-YE",
+                "as-IN",
+                "az-AZ",
+                "az-Cyrl-AZ",
+                "az-Latn-AZ",
+                "ba-RU",
+                "be-BY",
+                "bg-BG",
+                "bn-BD",
+                "bn-IN",
+                "bo-CN",
+                "br-FR",
+                "bs-BA",
+                "bs-Cyrl-BA",
+                "bs-Latn-BA",
+                "ca-ES",
+                "co-FR",
+                "cs-CZ",
+                "cy-GB",
+                "de-DE",
+                "da-DK",
+                "de-AT",
+                "de-CH",
+                "de-LI",
+                "de-LU",
+                "dsb-DE",
+                "dv-MV",
+                "el-GR",
+                "en-UK",
+                "en-US",
+                "en-AU",
+                "en-BZ",
+                "en-CA",
+                "en-GB",
+                "en-IE",
+                "en-IN",
+                "en-JM",
+                "en-MY",
+                "en-NZ",
+                "en-PH",
+                "en-SG",
+                "en-TT",
+                "en-ZA",
+                "en-ZW",
+                "es-ES",
+                "es-AR",
+                "es-BO",
+                "es-CL",
+                "es-CO",
+                "es-CR",
+                "es-DO",
+                "es-EC",
+                "es-GT",
+                "es-HN",
+                "es-MX",
+                "es-NI",
+                "es-PA",
+                "es-PE",
+                "es-PR",
+                "es-PY",
+                "es-SV",
+                "es-US",
+                "es-UY",
+                "es-VE",
+                "et-EE",
+                "eu-ES",
+                "fa-IR",
+                "fi-FI",
+                "fil-PH",
+                "fo-FO",
+                "fr-FR",
+                "fr-BE",
+                "fr-CA",
+                "fr-CH",
+                "fr-LU",
+                "fr-MC",
+                "fy-NL",
+                "ga-IE",
+                "gd-GB",
+                "gl-ES",
+                "gsw-FR",
+                "gu-IN",
+                "ha-NG",
+                "he-IL",
+                "hi-IN",
+                "hr-HR",
+                "hr-BA",
+                "hsb-DE",
+                "hu-HU",
+                "hy-AM",
+                "id-ID",
+                "ig-NG",
+                "ii-CN",
+                "is-IS",
+                "it-CH",
+                "it-IT",
+                "iu-Cans-CA",
+                "iu-Latn-CA",
+                "ja-JP",
+                "ka-GE",
+                "kk-KZ",
+                "kl-GL",
+                "km-KH",
+                "kn-IN",
+                "kok-IN",
+                "ko-KR",
+                "ky-KG",
+                "lb-LU",
+                "lo-LA",
+                "lt-LT",
+                "lv-LV",
+                "mi-NZ",
+                "mk-MK",
+                "ml-IN",
+                "mn-MN",
+                "mn-CN",
+                "moh-CA",
+                "mr-IN",
+                "ms-BN",
+                "ms-MY",
+                "mt-MT",
+                "nb-NO",
+                "ne-NP",
+                "nl-BE",
+                "nl-NL",
+                "nn-NO",
+                "nso-ZA",
+                "oc-FR",
+                "or-IN",
+                "pa-IN",
+                "pl-PL",
+                "prs-AF",
+                "ps-AF",
+                "pt-BR",
+                "pt-PT",
+                "qut-GT",
+                "quz-BO",
+                "quz-EC",
+                "quz-PE",
+                "rm-CH",
+                "ro-RO",
+                "ru-RU",
+                "rw-RW",
+                "sah-RU",
+                "sa-IN",
+                "se-FI",
+                "se-NO",
+                "se-SE",
+                "si-LK",
+                "sk-SK",
+                "sl-SI",
+                "sma-NO",
+                "sma-SE",
+                "smj-NO",
+                "smj-SE",
+                "smn-FI",
+                "sms-FI",
+                "sq-AL",
+                "sr-Cyrl-BA",
+                "sr-Cyrl-CS",
+                "sr-Cyrl-ME",
+                "sr-Cyrl-RS",
+                "sr-Latn-BA",
+                "sr-Latn-CS",
+                "sr-Latn-ME",
+                "sr-Latn-RS",
+                "sv-FI",
+                "sv-SE",
+                "sw-KE",
+                "syr-SY",
+                "ta-IN",
+                "te-IN",
+                "tg-Cyrl-TJ",
+                "th-TH",
+                "tk-TM",
+                "tn-ZA",
+                "tr-TR",
+                "tt-RU",
+                "tzm-Latn-DZ",
+                "ug-CN",
+                "uk-UA",
+                "ur-PK",
+                "uz-UZ",
+                "uz-Cyrl-UZ",
+                "uz-Latn-UZ",
+                "vi-VN",
+                "wo-SN",
+                "xh-ZA",
+                "yo-NG",
+                "zh-CN",
+                "zh-HK",
+                "zh-MO",
+                "zh-SG",
+                "zh-TW",
+                "zu-ZA"};
+        for (int i = 0; i < langauge_country_code.length; i++) {
+            if (getLanguageCode(languageName.toLowerCase()).equals(langauge_country_code[i].split("-")[0])) {
+                return langauge_country_code[i].split("-")[1].toLowerCase();
+            }
+        }
+        return languageName;
+    }
+    // Method to get the ISO 639-1 language code from the language name using built-in functionality
+    public static String getLanguageCode(String languageName) {
+        Locale[] availableLocales = Locale.getAvailableLocales();
+        for (Locale locale : availableLocales) {
+            if (locale.getDisplayLanguage().equalsIgnoreCase(languageName)) {
+                System.out.println(locale.getLanguage());
+                return locale.getLanguage();
+            }
+        }
+        return "Unknown";
+    }
 }
+
+
+
 

@@ -8,21 +8,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Adapter;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.Toast;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
 public class RecentHistory_Activity extends AppCompatActivity {
 
-    private ImageView shutdown, textImg;
+    private ImageView goback, textImg;
     private Model database;
     private ConstraintLayout showEmpty,showData;
-    Button clearbtn;
+    FloatingActionButton clearbtn;
     ListView datalistView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,12 +30,12 @@ public class RecentHistory_Activity extends AppCompatActivity {
         //Removing default top header of application
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        getSupportActionBar().hide(); //This line hide default header
 
         setContentView(R.layout.activity_recent_history);
 
         //All Intents
         Intent shutdownIntent = new Intent(RecentHistory_Activity.this,MainActivity.class);
+        Intent homeIntent = new Intent(RecentHistory_Activity.this, HomeActivity.class);
         Intent dashboardIntent = new Intent(RecentHistory_Activity.this,Dashboard.class);
 
 
@@ -78,6 +77,12 @@ public class RecentHistory_Activity extends AppCompatActivity {
 
             }
         });
-
+        goback = findViewById(R.id.back_btn);
+        goback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(homeIntent);
+            }
+        });
     }
 }

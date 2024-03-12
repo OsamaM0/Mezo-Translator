@@ -17,4 +17,14 @@
     <string name="phrase_home_subs_btn">تعلم أكثر العبارات الشائعه</string>
     <string name="chat_home_btn">محادثه</string>
     <string name="chat_home_subs_btn">دردشه صوتيه بكل لغات العالم</string>
+    <string name="settings_home_btn">الإعدادات</string>
+    <string name="about_home_btn">حول</string>
+    <string name="share_home_btn">مشاركة</string>
+    <string name="premium_home_btn">Premium</string>
+    <string name="logout_home_btn">خروج</string>
+    <string name="open_nav">Open Navigation Drawer</string>
+    <string name="close_nav">Close Navigation Drawer</string>
+    <string name="mezo_app_logo_descrption">Mezo App Logo</string>
+    <string name="i_accept_the">انا أوافق على</string>
+    <string name="continue_btn">تابع</string>
 </resources>
