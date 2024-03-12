@@ -14,7 +14,7 @@ import android.widget.LinearLayout;
 
 public class HomeFragment extends Fragment {
     private LinearLayout translate_layout, camera_layout, history_layout;
-    private LinearLayout translate_btn, camera_btn, history_btn;
+    private LinearLayout translate_btn, camera_btn, history_btn, chat_btn;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -27,7 +27,7 @@ public class HomeFragment extends Fragment {
         translate_btn = view.findViewById(R.id.translate_layout);
         camera_btn = view.findViewById(R.id.camera_layout);
         history_btn = view.findViewById(R.id.history_layout);
-
+        chat_btn = view.findViewById(R.id.chat_layout);
 
         // Set an OnClickListener for the button
         translate_btn.setOnClickListener(new View.OnClickListener() {
@@ -64,6 +64,16 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        chat_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Create an Intent object
+                Intent intent = new Intent(getActivity(), ChatActivity.class);
+
+                // Start the activity
+                startActivity(intent);
+            }
+        });
 
         // Return the inflated layout
         return view;

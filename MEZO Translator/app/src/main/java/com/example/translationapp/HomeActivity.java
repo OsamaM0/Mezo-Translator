@@ -50,45 +50,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
-//            navigationView.setCheckedItem(R.id.nav_translate);
         }
-
-
-
-
-//        // ____________  OPEN TRANSLATOR ACTIVITY ____________
-//        translate_layout = findViewById(R.id.translate_layout);
-//        Intent translatorIntent = new Intent(HomeActivity.this, Dashboard.class);
-//
-//        translate_layout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(translatorIntent);
-//            }
-//        });
-//
-//        // ____________  OPEN CAMERA ACTIVITY ____________
-//        camera_layout = findViewById(R.id.camera_layout);
-//        Intent cameraIntent = new Intent(HomeActivity.this , Picture_Text_Activity.class);
-//
-//        camera_layout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(cameraIntent);
-//            }
-//        });
-//
-//        // ____________  OPEN HISTORY ACTIVITY ____________
-//        history_layout =   findViewById(R.id.history_layout);
-//        Intent historyIntent = new Intent(HomeActivity.this, RecentHistory_Activity.class);
-//
-//        history_layout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(historyIntent);
-//            }
-//        });
-
 
 
     }

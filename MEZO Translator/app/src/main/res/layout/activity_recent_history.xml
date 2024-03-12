@@ -23,7 +23,7 @@
             android:id="@+id/back_btn"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            app:srcCompat="@drawable/ic_logout"
+            app:srcCompat="@drawable/ic_back"
             app:tint="?attr/backgroundColor"
             android:layout_gravity="left"
             android:layout_margin="10dp"
@@ -57,9 +57,10 @@
             android:id="@+id/emtyHistory"
             android:layout_width="274dp"
             android:layout_height="278dp"
+            android:foregroundGravity="center"
             app:layout_constraintVertical_chainStyle="packed"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/historyLayout"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -72,6 +73,7 @@
                 android:layout_marginEnd="38dp"
                 android:layout_marginBottom="33dp"
                 android:alpha="0.1"
+
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.6"
@@ -89,6 +91,7 @@
                 android:alpha="0.3"
                 android:text="@string/bin_is_empty_text"
                 android:textSize="26dp"
+                android:gravity="center"
                 app:fontFamily="@font/inria_sans_bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
