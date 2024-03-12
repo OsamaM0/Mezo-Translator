@@ -34,13 +34,11 @@ public class RecentHistory_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_recent_history);
 
         //All Intents
-        Intent shutdownIntent = new Intent(RecentHistory_Activity.this,MainActivity.class);
         Intent homeIntent = new Intent(RecentHistory_Activity.this, HomeActivity.class);
-        Intent dashboardIntent = new Intent(RecentHistory_Activity.this,Dashboard.class);
 
 
         //Database related implementation
-         database  = new Model(this);
+        database  = new Model(this);
 
         showEmpty = findViewById(R.id.emtyHistory);
         showData = findViewById(R.id.historyLayout);

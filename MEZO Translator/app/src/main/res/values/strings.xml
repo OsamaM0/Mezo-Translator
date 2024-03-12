@@ -29,4 +29,7 @@
     <string name="mezo_app_logo_descrption">Mezo App Logo</string>
     <string name="i_accept_the">I accept the</string>
     <string name="continue_btn">Continue</string>
+    <string name="write_here_chatbox">write here</string>
+    <string name="clipboard_copy">Word copied to clipboard</string>
+    <string name="no_translatoin_for_this_language">No Translation for this language for now</string>
 </resources>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">MEZO Translation</string>
+    <string name="app_name">MEZO مترجم</string>
     <string name="translate_btn">ترجم</string>
     <string name="enter_text_to_translate">إدخل النص لترجمته</string>
     <string name="select_language_search">أختر لغة</string>
@@ -20,11 +20,15 @@
     <string name="settings_home_btn">الإعدادات</string>
     <string name="about_home_btn">حول</string>
     <string name="share_home_btn">مشاركة</string>
-    <string name="premium_home_btn">Premium</string>
+    <string name="premium_home_btn">مدفوع</string>
     <string name="logout_home_btn">خروج</string>
     <string name="open_nav">Open Navigation Drawer</string>
     <string name="close_nav">Close Navigation Drawer</string>
     <string name="mezo_app_logo_descrption">Mezo App Logo</string>
     <string name="i_accept_the">انا أوافق على</string>
     <string name="continue_btn">تابع</string>
+    <string name="write_here_chatbox">أكتب هنا</string>
+    <string name="clipboard_copy">تم نسخ النص إلي الحافظه</string>
+    <string name="no_translatoin_for_this_language">لا يوجد ترجمه لهذه اللغه حالياً</string>
+
 </resources>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".RecentHistory_Activity"
+    android:background="?attr/backgroundColor"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="left"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/ic_back"
+            app:tint="?attr/backgroundColor"
+
+            />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:fontFamily="@font/inria_sans_bold"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textAllCaps="true"
+            android:textColor="?attr/backgroundColor"
+            android:textSize="20sp" />
+    </androidx.appcompat.widget.Toolbar>
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="347dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/langnavigatorstyle"
+        android:elevation="8dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="5dp"
+        android:paddingRight="10dp">
+
+        <ImageView
+            android:id="@+id/source_lang_flag"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:srcCompat="@drawable/united_states" />
+
+        <ImageView
+            android:id="@+id/target_lang_flag"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="top|end"
+            android:layout_marginEnd="1dp"
+            android:importantForAccessibility="no"
+            app:srcCompat="@drawable/icons8_azerbaijan_48" />
+
+        <ImageView
+            android:id="@+id/changelanPos"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="155dp"
+            android:layout_marginTop="8dp"
+            app:srcCompat="@drawable/exchange"
+            app:tint="?attr/icon" />
+
+        <TextView
+            android:id="@+id/targetlanguage"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:layout_marginTop="5dp"
+
+            android:layout_marginEnd="55dp"
+            android:background="@drawable/strokeremove"
+            android:ems="10"
+
+
+            android:gravity="center"
+            android:inputType="textPersonName"
+            android:text="Urdu"
+            android:textSize="21dp"
+            app:fontFamily="@font/inria_sans_bold" />
+
+        <TextView
+            android:id="@+id/sourcelanguage"
+            android:layout_width="92dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/strokeremove"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="textPersonName"
+            android:text="English"
+            android:textSize="21dp"
+            app:fontFamily="@font/inria_sans_bold" />
+
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:id="@+id/phrases_items_lst"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

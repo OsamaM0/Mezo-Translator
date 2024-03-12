@@ -36,7 +36,7 @@ class TranslationServiceManager {
                 return response.body().string();
             } else {
                 // Handle the error
-                return null;
+                return "";
             }
         } catch (Exception e) {
             e.printStackTrace();

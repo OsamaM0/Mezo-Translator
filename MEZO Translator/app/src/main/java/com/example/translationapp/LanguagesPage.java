@@ -38,6 +38,9 @@ public class LanguagesPage extends AppCompatActivity {
         setContentView(R.layout.activity_languages_page);
 
         Intent dashboardIntent = new Intent(LanguagesPage.this,Dashboard.class);
+        Intent chatIntent = new Intent(LanguagesPage.this,ChatActivity.class);
+        Intent phrasesIntent = new Intent(LanguagesPage.this,PhrasesActivity.class);
+
 
         ListView langList = findViewById(R.id.list1);
 
@@ -46,6 +49,7 @@ public class LanguagesPage extends AppCompatActivity {
         String required = getIntent().getStringExtra("Language");
         String previously = getIntent().getStringExtra("Previous");
         String usertxt = getIntent().getStringExtra("userTxt");
+        String intent = getIntent().getStringExtra("Intent");
 
         try {
             lanlistview = new LanguageSelector();
@@ -80,20 +84,47 @@ public class LanguagesPage extends AppCompatActivity {
         langList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                if(required.equals("source")){
-                    dashboardIntent.putExtra("Required","source");
-                    dashboardIntent.putExtra("Language",parent.getItemAtPosition(position).toString());
-                    dashboardIntent.putExtra("previous",previously);
+                if (intent.equals("chat")) {
+                    if(required.equals("source")){
+                        chatIntent.putExtra("Required","source");
+                        chatIntent.putExtra("Language",parent.getItemAtPosition(position).toString());
+                        chatIntent.putExtra("previous",previously);
+                    }
+                    else{
+                        chatIntent.putExtra("Language",parent.getItemAtPosition(position).toString());
+                        chatIntent.putExtra("Required","target");
+                        chatIntent.putExtra("previous",previously);
+                    }
+                    chatIntent.putExtra("userText",usertxt);
+                    startActivity(chatIntent);
                 }
-                else{
-                    dashboardIntent.putExtra("Language",parent.getItemAtPosition(position).toString());
-                    dashboardIntent.putExtra("Required","target");
-                    dashboardIntent.putExtra("previous",previously);
+                else if (intent.equals("phrases")) {
+                    if(required.equals("source")){
+                        phrasesIntent.putExtra("Required","source");
+                        phrasesIntent.putExtra("Language",parent.getItemAtPosition(position).toString());
+                        phrasesIntent.putExtra("previous",previously);
+                    }
+                    else{
+                        phrasesIntent.putExtra("Language",parent.getItemAtPosition(position).toString());
+                        phrasesIntent.putExtra("Required","target");
+                        phrasesIntent.putExtra("previous",previously);
+                    }
+                    phrasesIntent.putExtra("userText",usertxt);
+                    startActivity(phrasesIntent);
                 }
-
-                dashboardIntent.putExtra("userText",usertxt);
-                startActivity(dashboardIntent);
+                else if (intent.equals("dashboard")){
+                    if (required.equals("source")) {
+                        dashboardIntent.putExtra("Required", "source");
+                        dashboardIntent.putExtra("Language", parent.getItemAtPosition(position).toString());
+                        dashboardIntent.putExtra("previous", previously);
+                    } else {
+                        dashboardIntent.putExtra("Language", parent.getItemAtPosition(position).toString());
+                        dashboardIntent.putExtra("Required", "target");
+                        dashboardIntent.putExtra("previous", previously);
+                    }
+                    dashboardIntent.putExtra("userText",usertxt);
+                    startActivity(dashboardIntent);
+                }
             }
         });
 

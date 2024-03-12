@@ -52,41 +52,33 @@ public class Dashboard extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard);
 
         //SQLite Database connectivity #########
-
          databaseCon = new Model(this);
 
-        //##############
-
-        //All Intents
-        Intent shutdownIntent = new Intent(Dashboard.this,MainActivity.class);
+        //--------------------------------------------------------------------------------
+        // ================================ ALL INTENTS =================================
+        //--------------------------------------------------------------------------------
         Intent homeIntent = new Intent(Dashboard.this, HomeActivity.class);
         Intent sourceLanguage = new Intent(Dashboard.this,LanguagesPage.class);
         Intent targetLanguage = new Intent(Dashboard.this,LanguagesPage.class);
         Intent historyIntent = new Intent(Dashboard.this,RecentHistory_Activity.class);
 
-
-        //Initialize variables
+        //--------------------------------------------------------------------------------
+        // ============================= INITIALIZE VARIABLES ============================
+        //--------------------------------------------------------------------------------
         languages = new LanguageSelector();
 
         // Getting User Input from user text box
         userText = findViewById(R.id.translatedtextbox);
-
-        //Getting Translate Button through which
-        //user can translate text
+        //Getting Translate Button through which user can translate text
         translateBtn = findViewById(R.id.translatetextbtn);
-
         //Text View where translated text display
         translatedText = findViewById(R.id.translatedTextView);
-
         //Getting source language from source language textView
         sourcelan = findViewById(R.id.sourcelanguage);
         source_lang_flag = findViewById(R.id.source_lang_flag);
-
-
         //Getting target language from target language textView
         targetlan = findViewById(R.id.targetlanguage);
         target_lang_flag = findViewById(R.id.target_lang_flag);
-
 
 
         String languageIntent = getIntent().getStringExtra("Language");
@@ -125,8 +117,11 @@ public class Dashboard extends AppCompatActivity {
         resID = getResources().getIdentifier("flag_"+getCountryCode(targetlan.getText().toString()), "drawable", getPackageName());
         target_lang_flag.setImageResource(resID);
 
+        // -----------------------------------------------------------------------------------------
+        // ============================= ON CLICK LISTENERS ========================================
+        // -----------------------------------------------------------------------------------------
 
-
+        // ============================ SWAP LANGUAGE BUTTON =======================================
 
         //Implement swapping the source and target language
         ImageView swaplan = findViewById(R.id.changelanPos);
@@ -146,6 +141,7 @@ public class Dashboard extends AppCompatActivity {
             }
         });
 
+        // ============================ TRANSLATE TEXT =======================================
         //Text translation logic placed here
         translateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -157,6 +153,11 @@ public class Dashboard extends AppCompatActivity {
                 String targetLanCode = languages.getlanguageCode(target);
 
                 createThread(sourceLanCode,targetLanCode,userText.getText().toString());
+                if ("".equals(result))
+                    Toast.makeText(getApplicationContext(), "Failed to Translate", Toast.LENGTH_SHORT).show();
+                else if (result == null )
+                    Toast.makeText(getApplicationContext(), "Failed to Connect to Internet", Toast.LENGTH_SHORT).show();
+
                 translatedText.setText(result);
                 //Translated text save into database
                 //for later use
@@ -174,6 +175,7 @@ public class Dashboard extends AppCompatActivity {
                 sourceLanguage.putExtra("Language","source");
                 sourceLanguage.putExtra("Previous",targetlan.getText().toString());
                 sourceLanguage.putExtra("userTxt",userText.getText().toString());
+                sourceLanguage.putExtra("Intent","dashboard");
                 startActivity(sourceLanguage);
             }
         });
@@ -185,6 +187,7 @@ public class Dashboard extends AppCompatActivity {
                 targetLanguage.putExtra("Language","target");
                 targetLanguage.putExtra("Previous",sourcelan.getText().toString());
                 targetLanguage.putExtra("userTxt",userText.getText().toString());
+                targetLanguage.putExtra("Intent","dashboard");
                 startActivity(targetLanguage);
             }
         });
@@ -581,7 +584,6 @@ public class Dashboard extends AppCompatActivity {
         Locale[] availableLocales = Locale.getAvailableLocales();
         for (Locale locale : availableLocales) {
             if (locale.getDisplayLanguage().equalsIgnoreCase(languageName)) {
-                System.out.println(locale.getLanguage());
                 return locale.getLanguage();
             }
         }

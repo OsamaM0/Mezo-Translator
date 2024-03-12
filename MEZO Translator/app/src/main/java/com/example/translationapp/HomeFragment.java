@@ -14,7 +14,7 @@ import android.widget.LinearLayout;
 
 public class HomeFragment extends Fragment {
     private LinearLayout translate_layout, camera_layout, history_layout;
-    private LinearLayout translate_btn, camera_btn, history_btn;
+    private LinearLayout translate_btn, camera_btn, history_btn, chat_btn, phrases_btn;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -27,6 +27,8 @@ public class HomeFragment extends Fragment {
         translate_btn = view.findViewById(R.id.translate_layout);
         camera_btn = view.findViewById(R.id.camera_layout);
         history_btn = view.findViewById(R.id.history_layout);
+        chat_btn = view.findViewById(R.id.chat_layout);
+        phrases_btn = view.findViewById(R.id.phrases_layout);
 
 
         // Set an OnClickListener for the button
@@ -58,6 +60,29 @@ public class HomeFragment extends Fragment {
             public void onClick(View v) {
                 // Create an Intent object
                 Intent intent = new Intent(getActivity(), RecentHistory_Activity.class);
+
+                // Start the activity
+                startActivity(intent);
+            }
+        });
+
+        chat_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Create an Intent object
+                Intent intent = new Intent(getActivity(), ChatActivity.class);
+
+                // Start the activity
+                startActivity(intent);
+            }
+        });
+
+
+        phrases_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Create an Intent object
+                Intent intent = new Intent(getActivity(), PhrasesActivity.class);
 
                 // Start the activity
                 startActivity(intent);

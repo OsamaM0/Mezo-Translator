@@ -54,7 +54,7 @@ public class LanguageSelector {
 
     LanguageSelector(){
         sourcelan = "English";
-        targetlan = "Korean";
+        targetlan = "Arabic";
         languageCodeMap = new HashMap<>();
         AddLanguages();
     }
