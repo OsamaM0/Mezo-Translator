@@ -9,6 +9,39 @@
     android:background="?attr/backgroundColor"
     tools:context=".Dashboard">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" >
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/ic_logout"
+            app:tint="?attr/backgroundColor"
+            android:layout_gravity="left"
+            android:layout_margin="10dp"
+
+            />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textAllCaps="true"
+            android:textColor="?attr/backgroundColor"
+            android:fontFamily="@font/inria_sans_bold"
+            android:textSize="20sp" />
+    </androidx.appcompat.widget.Toolbar>
+
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="347dp"
@@ -22,13 +55,13 @@
         android:paddingRight="10dp">
 
         <ImageView
-            android:id="@+id/imageView10"
+            android:id="@+id/source_lang_flag"
             android:layout_width="40dp"
             android:layout_height="40dp"
             app:srcCompat="@drawable/united_states" />
 
         <ImageView
-            android:id="@+id/imageView11"
+            android:id="@+id/target_lang_flag"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:layout_gravity="top|end"
@@ -43,7 +76,7 @@
             android:layout_marginStart="155dp"
             android:layout_marginTop="8dp"
             app:srcCompat="@drawable/exchange"
-            app:tint="@color/light_blue_purple" />
+            app:tint="?attr/icon" />
 
         <TextView
             android:id="@+id/targetlanguage"
@@ -76,7 +109,18 @@
             android:text="English"
             android:textSize="21dp"
             app:fontFamily="@font/inria_sans_bold" />
+
     </FrameLayout>
+
+    <ImageView
+        android:id="@+id/history_btn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="20dp"
+        android:layout_margin="15dp"
+        android:layout_gravity="end"
+        app:srcCompat="@drawable/history"
+        app:tint="?attr/colorPrimary" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -106,7 +150,11 @@
                     android:id="@+id/relativeLayout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="30dp"
+
+                    android:layout_marginTop="0dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="30dp"
                     android:background="@drawable/textbox_border"
                     android:elevation="8dp"
                     android:paddingLeft="5sp"
@@ -125,7 +173,7 @@
                         android:layout_marginBottom="3dp"
                         android:layout_toEndOf="@+id/usertextListen"
                         app:srcCompat="@drawable/icons8_copy_48"
-                        app:tint="@color/light_blue_purple" />
+                        app:tint="?attr/icon" />
 
                     <ImageView
                         android:id="@+id/usertextListen"
@@ -136,7 +184,7 @@
                         android:layout_marginEnd="12dp"
                         android:layout_marginBottom="1dp"
                         app:srcCompat="@drawable/icons8_voice_30"
-                        app:tint="@color/light_blue_purple"
+                        app:tint="?attr/icon"
                         tools:ignore="NotSibling" />
 
                     <EditText
@@ -196,7 +244,7 @@
                         android:layout_marginBottom="3dp"
                         android:layout_toEndOf="@+id/translatedttxtListen"
                         app:srcCompat="@drawable/icons8_copy_48"
-                        app:tint="@color/light_blue_purple" />
+                        app:tint="?attr/icon" />
 
                     <ImageView
                         android:id="@+id/translatedttxtListen"
@@ -207,7 +255,7 @@
                         android:layout_marginEnd="12dp"
                         android:layout_marginBottom="1dp"
                         app:srcCompat="@drawable/icons8_voice_30"
-                        app:tint="@color/light_blue_purple"
+                        app:tint="?attr/icon"
                         tools:ignore="NotSibling" />
 
                     <EditText
@@ -219,15 +267,15 @@
                         android:layout_marginEnd="10dp"
                         android:layout_marginBottom="10dp"
                         android:background="?attr/cardForegroundColor"
+                        android:backgroundTint="?attr/cardForegroundColor"
                         android:gravity="start"
                         android:inputType="textMultiLine"
-
-                        android:maxHeight="300dp"
+                        android:maxHeight="450dp"
+                        android:maxLines="4"
                         android:padding="10dp"
                         android:textColor="?attr/textFillColor"
                         android:textSize="20sp"
-                        app:tint="@color/light_blue_purple"
-                        tools:ignore="LabelFor" />
+                        app:tint="@color/light_blue_purple" />
                 </RelativeLayout>
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -243,13 +291,12 @@
         >
 
 
-
         <ImageView
             android:id="@+id/showCamera"
             android:layout_width="40dp"
             android:layout_height="40dp"
             app:srcCompat="@drawable/ic_camera"
-            app:tint="@color/light_blue_purple"
+            app:tint="?attr/colorPrimary"
             android:layout_marginEnd="10dp"
             />
 
@@ -259,27 +306,8 @@
             android:layout_height="40dp"
             android:layout_marginEnd="10dp"
             app:srcCompat="@drawable/ic_mic"
-            app:tint="@color/light_blue_purple" />
+            app:tint="?attr/colorPrimary" />
 
-
-        <ImageView
-            android:id="@+id/imageView8"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            app:srcCompat="@drawable/history"
-            app:tint="@color/light_blue_purple"
-            android:layout_marginEnd="10dp"/>
-
-
-
-        <ImageView
-            android:id="@+id/shutdownImg"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            app:srcCompat="@drawable/icons8_shutdown_26"
-            app:tint="@color/light_blue_purple" />
-
-            />
 
     </LinearLayout>
 

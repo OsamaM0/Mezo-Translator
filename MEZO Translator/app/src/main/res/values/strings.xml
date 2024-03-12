@@ -7,7 +7,7 @@
     <string name="clear_all_history_btn">Clear All</string>
     <string name="history_of_translation">History of Translation</string>
     <string name="bin_is_empty_text">It\'s Empty, No History</string>
-    <string name="translator_home_btn" >Translator</string>
+    <string name="translator_home_btn">Translator</string>
     <string name="translator_home_sub_btn">Translate your speech or your words</string>
     <string name="camera_home_btn">camera</string>
     <string name="camera_home_sup_btn">Take a Picture and Translate It</string>
@@ -17,4 +17,16 @@
     <string name="phrase_home_subs_btn">Learn Popular Phrases</string>
     <string name="chat_home_btn">Chat</string>
     <string name="chat_home_subs_btn">Voice Chat with All Languages</string>
+    <string name="settings_home_btn">Settings</string>
+    <string name="about_home_btn">About</string>
+    <string name="share_home_btn">Share</string>
+    <string name="premium_home_btn">Premium</string>
+    <string name="logout_home_btn">Logout</string>
+    <string name="open_nav">Open Navigation Drawer</string>
+    <string name="close_nav">Close Navigation Drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="mezo_app_logo_descrption">Mezo App Logo</string>
+    <string name="i_accept_the">I accept the</string>
+    <string name="continue_btn">Continue</string>
 </resources>
