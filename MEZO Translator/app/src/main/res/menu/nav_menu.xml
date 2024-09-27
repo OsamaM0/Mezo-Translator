@@ -31,12 +31,6 @@
             app:tint="?attr/icon"/>
 
         <item
-            android:id="@+id/nav_settings"
-            android:icon="@drawable/ic_settings"
-            android:title="@string/settings_home_btn"
-            app:tint="?attr/icon"/>
-
-        <item
             android:id="@+id/nav_about"
             android:icon="@drawable/ic_info"
             android:title="@string/about_home_btn"
@@ -50,6 +44,26 @@
 
 
     </group>
+
+    <item
+            android:title="">
+            <menu>
+
+                <item
+                    android:id="@+id/nav_mode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:title="@string/app_theme"
+                    android:icon="@drawable/ic_mode"
+                    app:showAsAction="always" />
+                <item
+                    android:id="@+id/nav_lang"
+                    android:icon="@drawable/ic_lang"
+                    android:title="@string/app_language"
+                    app:tint="?attr/icon"/>
+
+            </menu>
+       </item>
 
     <item
         android:title="">

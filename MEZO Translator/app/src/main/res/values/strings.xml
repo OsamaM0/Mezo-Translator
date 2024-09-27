@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MEZO Translation</string>
+    <string name="app_name">Mezo Translator</string>
     <string name="translate_btn">Translate</string>
     <string name="enter_text_to_translate">Enter text to translate</string>
     <!-- TODO: Remove or change this placeholder text -->
@@ -32,4 +32,10 @@
     <string name="write_here_chatbox">write here</string>
     <string name="clipboard_copy">Word copied to clipboard</string>
     <string name="no_translatoin_for_this_language">No Translation for this language for now</string>
+    <string name="app_theme">App Themes</string>
+    <string name="app_language">APP Language</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/9214589741</string>
+    <string name="native_add_unit_id">ca-app-pub-3940256099942544/2247696110</string>
+    <string name="buy_btn">buy now \nfor 4.99 forever</string>
+    <string name="restore_btn">Restore Subscription</string>
 </resources>

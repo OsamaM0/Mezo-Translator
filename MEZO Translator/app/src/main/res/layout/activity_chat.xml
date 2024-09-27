@@ -146,6 +146,8 @@
             android:layout_centerInParent="true"
             android:layout_toLeftOf="@+id/mic_btn"
             android:background="@drawable/roundcorner"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
             android:hint="@string/write_here_chatbox"
             android:padding="16dp" />
 

@@ -47,12 +47,26 @@
 
         </androidx.appcompat.widget.Toolbar>
 
+        <com.google.android.gms.ads.AdView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/backgroundColor"
+            android:elevation="4dp"
+            android:id="@+id/adView"
+            app:adSize="BANNER"
+            app:adUnitId="@string/banner_ad_unit_id"
+            >
+        </com.google.android.gms.ads.AdView>
+
         <FrameLayout
             android:id="@+id/fragment_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
+
+
     </LinearLayout>
+
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
@@ -64,5 +78,6 @@
         app:itemIconTint="?attr/icon"
         app:itemTextColor="?attr/textFillColor"
         app:menu="@menu/nav_menu" />
+
 
 </androidx.drawerlayout.widget.DrawerLayout>

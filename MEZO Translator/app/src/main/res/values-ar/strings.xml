@@ -25,10 +25,17 @@
     <string name="open_nav">Open Navigation Drawer</string>
     <string name="close_nav">Close Navigation Drawer</string>
     <string name="mezo_app_logo_descrption">Mezo App Logo</string>
+    <string name="hello_blank_fragment">اهلا فريم التطبيق</string>
     <string name="i_accept_the">انا أوافق على</string>
     <string name="continue_btn">تابع</string>
     <string name="write_here_chatbox">أكتب هنا</string>
     <string name="clipboard_copy">تم نسخ النص إلي الحافظه</string>
     <string name="no_translatoin_for_this_language">لا يوجد ترجمه لهذه اللغه حالياً</string>
+    <string name="app_theme">سمات التطبيق</string>
+    <string name="app_language">لغة التطبيق</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/9214589741</string>
+    <string name="native_add_unit_id">ca-app-pub-3940256099942544/2247696110</string>
+    <string name="buy_btn">أشتري الأن \nبسعر 4.99$ للأبد</string>
+    <string name="restore_btn">إستراجاع الأشتراك</string>
 
 </resources>

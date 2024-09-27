@@ -1,13 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/cardForegroundColor"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp" >
+    </androidx.viewpager.widget.ViewPager>
+
+    <LinearLayout
+        android:id="@+id/dotsLayout"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:layout_weight="3"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
     <Button
+        android:layout_weight="0"
+        android:layout_gravity="center_horizontal"
         android:id="@+id/continueBtn"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
@@ -18,89 +44,10 @@
         android:text="@string/continue_btn"
         android:textColor="?attr/textFillColor"
         android:background="@drawable/roundcorner"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"/>
 
-    <CheckBox
-        android:id="@+id/policyCheckBox"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginBottom="170dp"
-        android:layout_marginStart="72dp"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="600dp"
-        android:layout_height="350dp"
-        android:scaleType="centerCrop"
-        android:alpha="0.5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/worldmap" />
-
-
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/imageView2"
-        android:layout_width="210dp"
-        android:layout_height="210dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.284"
-        app:shapeAppearanceOverlay="@style/Circular"
-        app:srcCompat="@drawable/app_icon" />
-
-
-    <TextView
-        android:id="@+id/readPolicyLink"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="176dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginStart="5dp"
-        android:text="Terms &amp; Policy"
-
-        android:textColor="#0029FF"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/textView4" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="293dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="24dp"
-        android:gravity="center"
-        android:text="@string/app_name"
-        android:textColor="?attr/textFillColor"
-        android:textSize="28sp"
-        app:fontFamily="@font/inria_sans_bold"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="176dp"
-        android:layout_marginStart="8dp"
-        android:text="@string/i_accept_the"
-        android:textColor="?attr/textFillColor"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/policyCheckBox" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

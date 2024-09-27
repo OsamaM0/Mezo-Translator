@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.translationapp">
+    package="com.mezotranslator.MezoTranslation">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -15,18 +19,21 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.TranslationApp">
+        android:theme="@style/Theme.MezoTranslation">
         <activity
-            android:name=".PaymentActivity"
+            android:name="com.mezotranslator.MezoTranslation.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".PhrasesActivity"
+            android:name="com.mezotranslator.MezoTranslation.PaymentActivity"
             android:exported="false" />
         <activity
-            android:name=".ChatActivity"
+            android:name="com.mezotranslator.MezoTranslation.PhrasesActivity"
             android:exported="false" />
         <activity
-            android:name=".HomeActivity"
+            android:name="com.mezotranslator.MezoTranslation.ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.mezotranslator.MezoTranslation.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,23 +42,26 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Picture_Text_Activity"
+            android:name="com.mezotranslator.MezoTranslation.Picture_Text_Activity"
             android:exported="false" />
         <activity
-            android:name=".RecentHistory_Activity"
+            android:name="com.mezotranslator.MezoTranslation.RecentHistory_Activity"
+            android:exported="false" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713"/>
+        <activity
+            android:name="com.mezotranslator.MezoTranslation.Dashboard"
             android:exported="false" />
         <activity
-            android:name=".Dashboard"
+            android:name="com.mezotranslator.MezoTranslation.LanguagesPage"
             android:exported="false" />
         <activity
-            android:name=".LanguagesPage"
+            android:name="com.mezotranslator.MezoTranslation.PolicyPage"
             android:exported="false" />
-        <activity
-            android:name=".PolicyPage"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".arabic_ocr"-->
+<!--            android:exported="false" />-->
 
         <meta-data
             android:name="preloaded_fonts"

@@ -147,6 +147,25 @@
                 </LinearLayout>
             </LinearLayout>
 
+            <com.google.android.gms.ads.nativead.NativeAdView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/native_ad_container"
+                >
+                <LinearLayout
+                    android:orientation="vertical" android:layout_height="wrap_content" android:layout_width="match_parent">
+                    <LinearLayout
+                        android:orientation="horizontal" android:layout_height="wrap_content" android:layout_width="match_parent">
+                        <com.google.android.gms.ads.nativead.MediaView
+                            android:id="@+id/ad_media" android:layout_height="wrap_content" android:layout_width="match_parent"/>
+                        <TextView
+                            android:id="@+id/ad_headline" android:layout_height="wrap_content" android:layout_width="match_parent"/>
+                    </LinearLayout>
+                    <!--Add remaining assets such as the image and media view.-->
+                </LinearLayout>
+            </com.google.android.gms.ads.nativead.NativeAdView>
+
             <!-- Button 3 -->
             <LinearLayout
                 android:id="@+id/phrases_layout"
@@ -189,6 +208,7 @@
 
                 </LinearLayout>
             </LinearLayout>
+
 
 
             <LinearLayout
